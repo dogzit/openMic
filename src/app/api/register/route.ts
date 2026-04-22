@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { transporter } from "@/lib/mail";
+// @/lib/prisma-г доорх байдлаар сольсон:
+import { prisma } from "../../../lib/prisma";
+// @/lib/mail-г доорх байдлаар сольсон:
+import { transporter } from "../../../lib/mail";
 
 export async function POST(req: NextRequest) {
   try {
     // --- 0. БҮРТГЭЛИЙН ХУГАЦАА ШАЛГАХ ---
-    // 2026 оны 3-р сарын 29, 13:00 цаг
+    // Чиний DEADLINE 4-р сарын 29 гэж байна, харин мессеж дээрээ 3-р сар гэж бичсэн байна.
+    // Хэрэв 4-р сар бол message-ээ бас "4-р сарын 29" болговол хэрэглэгч төөрөхгүй.
     const DEADLINE = new Date("2026-04-29T13:00:00");
     const NOW = new Date();
 
@@ -14,9 +17,9 @@ export async function POST(req: NextRequest) {
         {
           success: false,
           message:
-            "Уучлаарай, бүртгэлийн хугацаа 3-р сарын 29-ний 13:00 цагт дууссан байна.",
+            "Уучлаарай, бүртгэлийн хугацаа 4-р сарын 29-ний 13:00 цагт дууссан байна.",
         },
-        { status: 403 }, // Forbidden
+        { status: 403 },
       );
     }
 
@@ -44,7 +47,7 @@ export async function POST(req: NextRequest) {
           message:
             "Энэ мэйл хаяг аль хэдийн бүртгүүлсэн байна. Нэг мэйлээр нэг л удаа бүртгүүлэх боломжтой.",
         },
-        { status: 400 }, // Bad Request
+        { status: 400 },
       );
     }
 
