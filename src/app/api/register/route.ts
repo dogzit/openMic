@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
       html: `
         <div style="font-family: sans-serif; padding: 20px; border: 1px solid #3b82f6; border-radius: 12px; max-width: 500px;">
           <h2 style="color: #1e3a8a;">Сайн уу, ${firstName}!</h2>
-          <p style="font-size: 16px; color: #334155;">Чиний <b>Open Mic Night</b>-д оролцох бүртгэл амжилттай баталгаажлаа. Тайзан дээр гялалзахыг чинь тэсэн ядан хүлээж байна!</p>
+          <p style="font-size: 16px; color: #334155;">Чиний <b>Open Mic</b>-д оролцох бүртгэл амжилттай баталгаажлаа. Тайзан дээр гялалзахыг чинь тэсэн ядан хүлээж байна!</p>
           <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #3b82f6;">
             <p style="margin: 0; font-weight: bold; color: #1e293b;">Бүртгэлийн мэдээлэл:</p>
             <ul style="list-style: none; padding: 0; margin-top: 10px;">
