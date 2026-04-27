@@ -163,7 +163,7 @@ export default function OpenMicPage() {
         <div className="flex whitespace-nowrap font-mono text-[10px] tracking-[0.2em] text-[#e8ff47]/80 animate-ticker">
           {[1, 2, 3, 4].map((i) => (
             <span key={i} className="px-8 uppercase font-bold text-[#e8ff47]">
-              OPEN MIC NIGHT • 05.29 WEDNESDAY • Сургуулийн хөл бөмбөгийн талбайд • REGISTRATION OPEN •
+              OPEN MIC NIGHT • 04.29 WEDNESDAY • Сургуулийн хөл бөмбөгийн талбайд • REGISTRATION OPEN •
             </span>
           ))}
         </div>
@@ -224,7 +224,7 @@ export default function OpenMicPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12 border-t border-white/10 pt-6 sm:pt-10">
             {[
-              { val: "05.29", label: "Өдөр" },
+              { val: "04.29", label: "Өдөр" },
               { val: "14:00", label: "Цаг" },
               { val: "Сургуулийн хөл бөмбөгийн талбайд", label: "Байршил" }
             ].map((item, idx) => (
