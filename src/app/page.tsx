@@ -225,7 +225,7 @@ export default function OpenMicPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12 border-t border-white/10 pt-6 sm:pt-10">
             {[
               { val: "04.29", label: "Өдөр" },
-              { val: "14:00", label: "Цаг" },
+              { val: "13:00", label: "Цаг" },
               { val: "Сургуулийн хөл бөмбөгийн талбайд", label: "Байршил" }
             ].map((item, idx) => (
               <div key={item.label} className={idx === 2 ? "col-span-2 md:col-span-1" : ""}>
