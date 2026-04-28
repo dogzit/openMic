@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import { Syne, Bebas_Neue, Syne_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="mn" className="scroll-smooth">
       <body className={`${syne.variable} ${bebas.variable} ${syneMono.variable} font-sans bg-[#080808] text-[#f0ede6] antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
